@@ -21,14 +21,14 @@
 
 module baud_gen #(
     parameter CLK_FREQ = 100000000,
-    parameter BAUD_RATE = 921600,
+    parameter BAUD_RATE = 115200,
     parameter OVERSAMPLE = 16
 )(
     input wire clk,
     input wire rst,
     output reg tick_16x
 );
-    // Calculate divider: 100MHz / (921600 * 16) = ~7 clocks
+    // Calculate divider: 100MHz / (115200 * 16) = ~54 clocks
     localparam MAX_COUNT = CLK_FREQ / (BAUD_RATE * OVERSAMPLE);
     
     reg [$clog2(MAX_COUNT)-1:0] count;

@@ -59,7 +59,7 @@ module uart_top (
     // ---------------------------------------------------------
     baud_gen #(
         .CLK_FREQ(100000000), 
-        .BAUD_RATE(921600), 
+        .BAUD_RATE(115200), 
         .OVERSAMPLE(16)
     ) u_baud (
         .clk(clk_100mhz), 
