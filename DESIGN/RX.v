@@ -43,6 +43,7 @@
                 tick_count <= 0;
                 bit_index <= 0;
                 rx_data <= 0;
+                shift_reg <= 0;
             end else if (tick_16x) begin
                 case (state)
                     IDLE: begin
