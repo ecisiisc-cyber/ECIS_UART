@@ -64,6 +64,8 @@ module uart_top_tb;
     wire [1:0] rx_state;
     assign rx_state=dut.u_rx.state;
     
+    wire rx_done;
+    assign rx_done=dut.u_rx.rx_done;
     
     
     

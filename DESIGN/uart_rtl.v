@@ -88,7 +88,7 @@ module uart_top (
         .din(rx_byte_out),
         .wr_en(rx_valid_pulse),     // Write when RX module finishes a byte
         .dout(rx_fifo_dout),
-        .rd_en(1'b0),               // USER LOGIC controls this to read data!
+        .rd_en(rx_fifo_rd_en),               // USER LOGIC controls this to read data!  hr update 3.35 march 2 form 1'b0 to rx_fifo_rd_en
         .full(rx_fifo_full),
         .empty(rx_fifo_empty),
         .prog_full(rx_prog_full)    // Connects to RTS

@@ -9,9 +9,21 @@ create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_
 set_property -dict {PACKAGE_PIN R17 IOSTANDARD LVCMOS33} [get_ports sys_rst_n]
 
 
+#Internal connection
+
 set_property -dict {PACKAGE_PIN B18 IOSTANDARD LVCMOS33} [get_ports uart_txd]
 set_property -dict {PACKAGE_PIN A18 IOSTANDARD LVCMOS33} [get_ports uart_rxd]
 
 # Flow Control Pins (Verify on schematic!)
 set_property -dict {PACKAGE_PIN E18 IOSTANDARD LVCMOS33} [get_ports uart_rts]
 set_property -dict {PACKAGE_PIN D18 IOSTANDARD LVCMOS33} [get_ports uart_cts]
+
+
+#external connection
+
+#set_property -dict {PACKAGE_PIN T18 IOSTANDARD LVCMOS33} [get_ports uart_txd]
+#set_property -dict {PACKAGE_PIN R18 IOSTANDARD LVCMOS33} [get_ports uart_rxd]
+
+## Flow Control Pins (Verify on schematic!)
+#set_property -dict {PACKAGE_PIN R15 IOSTANDARD LVCMOS33} [get_ports uart_rts]
+#set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports uart_cts]
